@@ -384,7 +384,13 @@
         show heading.where(level: 2): h => {
             set text(weight: "bold", size: 12pt)
 
-            [#counter(heading).display() #h.body]
+            block(inset: (left: 1em))[#counter(heading).display() #h.body]
+        }
+        
+        show heading.where(level: 3): h => {
+            set text(weight: "bold", size: 12pt)
+
+            block(inset: (left: 3em))[#counter(heading).display() #h.body]
         }
 
         pagebreak(weak: true)
