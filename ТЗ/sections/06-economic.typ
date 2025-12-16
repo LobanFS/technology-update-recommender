@@ -10,38 +10,3 @@
 == Экономические преимущества
 
 #h(2em) Разрабатываемый сервис позволяет снизить затраты времени на ручной поиск информации и повысить качество принимаемых технических решений.
-
-== Преимущества перед аналогами
-
-#let column_names = (
-  [Яндекс Музыка],
-  [Spotify],
-  [Apple Music],
-)
-
-#let plus = table.cell(
-  fill: green.lighten(60%),
-)[+]
-
-#let minus = table.cell(
-  fill: red.lighten(60%),
-)[-]
-
-#figure(
-  caption: [Сравнение функциональных характеристик],
-  table(
-    columns: (6cm,) + (2cm,) * column_names.len(),
-    rows: (3cm, 1.5cm),
-    align: center + horizon,
-    table.header(
-      [Функция],
-      ..column_names.map(col => rotate(0deg, reflow: true, col)),
-    ),
-    
-    [Feature 1], minus, plus, minus,
-    [Feature 2], plus, plus, plus,
-    [Feature 3], minus, plus, minus,
-    
-    [*Итого*], [*2*], [*3*], [*5*],
-  ),
-)
